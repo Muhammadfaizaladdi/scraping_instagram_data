@@ -55,8 +55,8 @@ def parse_instafiles(username, path, initial_path):
                 post_id = metadata['node']['id']
             except:
                 post_id = ""
-            minedata = {'filename': filename, 'post_type': type_, 'time': time, 'text': text,
-                    'likes': likes, 'comments' : comments, "total_interaction":total_interaction, 'username' : username, 'fullname':fullname,  'followers' : followers, 'video_view_count':video_view_count, 'post_id' : post_id, 'url':url}
+            minedata = {'post_id' : post_id, 'username' : username, 'fullname':fullname, 'followers' : followers, 'post_type': type_, 'time': time, 
+                    'text': text, 'likes': likes, 'comments' : comments, "total_interaction":total_interaction,     'video_view_count':video_view_count,  'url':url}
             #print('Writing to dataframe...')
             dataframe = dataframe.append(minedata, ignore_index=True)
             #print('Closing file...')
