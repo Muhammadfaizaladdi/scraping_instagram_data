@@ -22,6 +22,8 @@ enddate = datetime.datetime(2022,8,1)
 # Default Path
 initial_path = insta_vars["initial_path"]
 
+saved_filename = "nama_file"
+
 def run():
   # Mendownload data dari setiap user, dimana datanya akan di simpan secara default di folder data pada path folder saat ini
   for user in list_of_users:
@@ -37,7 +39,7 @@ def run():
   full_data = pd.concat(list_df_of_users)
 
   # Save the data dalam bentuk excel
-  full_data.to_excel("data/selebgram_gorontalo.xlsx", index=False)
+  full_data.to_excel(f"data/{saved_filename}.xlsx", index=False)
 
 
 if __name__ == "__main__":
